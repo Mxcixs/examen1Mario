@@ -1,0 +1,96 @@
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <h2>Información</h2>
+      <span *ngIf="submitted && createInfo.invalid" class="badge bg-danger"
+        >Todos los campos son requeridos</span
+      >
+      <form
+        class="row g-3 mt-2"
+        [formGroup]="createInfo"
+        (ngSubmit)="agregarInfo()"
+      >
+        <div class="col-md-4">
+          <label for="validationDefault01" class="form-label">Nombre</label>
+          <input
+            type="text"
+            class="form-control"
+            id="validationDefault01"
+            formControlName="nombre"
+            required
+          />
+        </div>
+        <div class="col-md-4">
+          <label for="validationDefault01" class="form-label">Edad</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="edad"
+            required
+          />
+        </div>
+        <div class="col-md-4">
+          <label for="validationDefaultUsername" class="form-label"
+            >Email</label
+          >
+          <div class="input-group">
+            <span class="input-group-text" id="inputGroupPrepend2">@</span>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="email"
+              aria-describedby="inputGroupPrepend2"
+              required
+            />
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="validationDefault04" class="form-label">Categoria</label>
+          <select class="form-select" formControlName="categoria" required>
+            <option selected disabled value=""></option>
+            <option value="Cumpleaños">Cumpleaños</option>
+            <option value="Conferencias">Conferencias</option>
+            <option value="Bodas">Bodas</option>
+            <option value="Capacitaciones">Capacitaciones</option>
+            <option value="Otros">Otros</option>
+          </select>
+        </div>
+        <div class="col-md-5">
+          <label for="validationDefault06" class="form-label"
+            >Descripción</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            formControlName="descripcion"
+            required
+          />
+        </div>
+        <div class="col-md-3">
+          <label for="validationDefault05" class="form-label">Horario</label>
+          <input
+            type="datetime-local"
+            class="form-control"
+            formControlName="horario"
+            required
+          />
+        </div>
+
+        <div class="col-md-4">
+          <label for="validationDefault07" class="form-label">Estado</label>
+          <select class="form-select" formControlName="estado" required>
+            <option selected disabled value=""></option>
+            <option value="Disponible">Disponible</option>
+            <option value="En mora">En mora</option>
+            <option value="Cancelado">Cancelado</option>
+          </select>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">
+            Enviar formulario
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

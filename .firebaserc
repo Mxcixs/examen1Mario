@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "crudclientes-c68c7": {
+      "hosting": {
+        "examen1Mario": [
+          "crudclientes-c68c7"
+        ]
+      }
+    }
+  }
+}
